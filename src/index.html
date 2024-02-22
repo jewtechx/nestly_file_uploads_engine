@@ -7,7 +7,7 @@
 </head>
 <body>
   <h2>Upload Avatar</h2>
-  <form action="http://localhost:4000/upload/avatar" method="POST" enctype="multipart/form-data">
+  <form action="http://localhost:4000/upload/avatar?id=65c99fae8d02ba2f10392d3c" method="POST" enctype="multipart/form-data">
     <input type="file" name="avatar" accept="image/*">
     <button type="submit">Upload Avatar</button>
   </form>
@@ -15,7 +15,7 @@
   <hr>
 
   <h2>Upload Apartment Images</h2>
-  <form action="http://localhost:4000/upload/apartment" method="POST" enctype="multipart/form-data">
+  <form action="http://localhost:4000/upload/apartment?id=65c99fae8d02ba2f10392d3c" method="POST" enctype="multipart/form-data">
     <input type="file" name="images" accept="image/*" multiple>
     <button type="submit">Upload Apartment Images</button>
   </form>

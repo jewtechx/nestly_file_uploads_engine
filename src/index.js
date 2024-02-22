@@ -45,6 +45,7 @@ app.post("/upload/avatar", (req, res) => {
     }
 
     const image = await Image.create({
+      useId:req.query.id,
       filename:req.file.filename,
       path:req.file.path
     })
@@ -58,14 +59,15 @@ app.post("/upload/apartment", (req, res) => {
     if (err) {
       return res.json(500).send(err.message);
     }
-
-    let image;
-    const uploadedFiles = req.files.map(async (file) => (
-      image = await Image.create({
+    
+    const uploadedFiles = req.files.map(async (file) => {
+      let image = await Image.create({
+        useId:req.query.id,
         filename:file.filename,
-        path:req.file.path
+        path:file.path
       })
-    ));
+      return image
+    });
 
     res.send(uploadedFiles);
   });
