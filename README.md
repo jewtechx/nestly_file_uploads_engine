@@ -37,7 +37,7 @@ This is a Node.js application built with Express.js to handle file uploads. It u
 - **MONGO_URI**: MongoDB connection string.
 
 ## Author
-[Your Name]
+Jew Kofi Larbi Danquah
 
 ## License
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
